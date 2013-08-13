@@ -1,0 +1,132 @@
+
+html {
+	background: url(images/vegas.jpg) no-repeat center fixed;
+	background-size: cover;
+}
+
+a { color: inherit; }
+
+.blur {
+	-webkit-filter: blur(3px);
+	-moz-filter: blur(3px);
+	-o-filter: blur(3px);
+	-ms-filter: blur(3px);
+	filter: blur(3px);
+}
+
+.vegas-header {
+	width: 100%; height: 100%;
+	background: rgba(0,0,64,.5);
+	line-height: .8;
+	position: relative;
+}
+.vegas-header-center {
+	width: 100%;
+	margin-top: -82px;
+	position: absolute;
+	top: 50%; left: 0;
+	text-align: center;
+}
+.vegas-title {
+	color: #fff;
+	font-size: 120px;
+	font-weight: 800;
+	margin-bottom: 20px;
+}
+.vegas-subtitle { font-size: 60px; }
+
+.vegas-rsvp { width: 600px; margin: 0 auto; padding: 100px 0; }
+
+.vegas-section {
+	background: rgba(0,0,64,.8);
+	margin-bottom: 1px;
+	padding: 30px;
+}
+
+.vegas-step-1,
+.vegas-step-2,
+.vegas-step-3 { background: rgba(0,0,64,.9); color: #fff; }
+.vegas-form {}
+.vegas-hotels { padding: 0; }
+.vegas-submit { background: transparent; }
+
+.vegas-rsvp-h1 {
+	color: #fff;
+	font-size: 60px;
+	font-weight: 800;
+	letter-spacing: .2em;
+}
+.vegas-rsvp-h2 {
+	font-size: 18px;
+	letter-spacing: .1em;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+}
+.vegas-rsvp-p { font-size: 24px; }
+
+.vegas-bool { text-align: center; }
+.vegas-bool-option {
+	width: 200px;
+	display: inline-block;
+	font-size: 36px;
+	line-height: 80px;
+	-webkit-transition: .3s;
+	transition: .3s;
+}
+.vegas-bool-option:hover { background: rgba(0,0,64,.9); color: #fff; }
+.vegas-bool-option.selected { background: #fff; color: #004; }
+
+.vegas-rsvp-input {
+	width: 100%;
+	color: #004;
+	font-size: 20px;
+	line-height: normal;
+	margin-bottom: 15px;
+	padding: 15px;
+}
+.vegas-rsvp-label { font-size: 18px; margin-right: 20px; }
+.vegas-rsvp-plus { width: 60px; }
+
+.vegas-hotel {
+	cursor: pointer;
+	padding: 20px 30px;
+	position: relative;
+	-webkit-transition: .3s;
+	transition: .3s;
+}
+.vegas-hotel:hover { background: rgba(0,0,64,.9); color: #fff; }
+.vegas-hotel a { border-bottom: 1px dotted #fff; }
+.vegas-hotel:active,
+.vegas-hotel.selected { background: #fff; color: #004; }
+.vegas-hotel.selected:after {
+	width: 7px; height: 21px;
+	border: 0 solid #004;
+	border-width: 0 5px 5px 0;
+	content: '';
+	position: absolute;
+	right: 40px; top: 30px;
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-transform: rotate(45deg);
+}
+.vegas-hotel.selected a { border-color: #004; }
+.vegas-hotel-name { font-size: 30px; font-weight: 300; margin-bottom: 5px; }
+.vegas-hotel-blurb { font-size: 18px; letter-spacing: .05em; }
+
+.vegas-submit-button {
+	width: 240px; height: 80px;
+	background: rgba(255,255,255,.7);
+	border-radius: 40px;
+	color: #004;
+	display: block;
+	font-size: 24px;
+	font-weight: bold;
+	letter-spacing: .2em;
+	line-height: 80px;
+	margin: 0 auto;
+	text-align: center;
+	text-transform: uppercase;
+	-webkit-transition: .3s;
+	transition: .3s;
+}
+.vegas-submit-button:hover { background: #fff; }
