@@ -14,6 +14,8 @@ a { color: inherit; }
 	filter: blur(3px);
 }
 
+/*  Header  */
+
 .vegas-header {
 	width: 100%; height: 100%;
 	background: rgba(0,0,64,.5);
@@ -35,11 +37,13 @@ a { color: inherit; }
 }
 .vegas-subtitle { font-size: 60px; }
 
+/*  RSVP Containers  */
+
 .vegas-rsvp { width: 600px; margin: 0 auto; padding: 100px 0; }
 
 .vegas-section {
 	background: rgba(0,0,64,.8);
-	margin-bottom: 1px;
+	margin-bottom: 2px;
 	padding: 30px;
 }
 
@@ -49,6 +53,10 @@ a { color: inherit; }
 .vegas-form {}
 .vegas-hotels { padding: 0; }
 .vegas-submit { background: transparent; }
+
+.vegas-toggle { display: none; }
+
+/*  RSVP Content  */
 
 .vegas-rsvp-h1 {
 	color: #fff;
@@ -84,8 +92,8 @@ a { color: inherit; }
 	margin-bottom: 15px;
 	padding: 15px;
 }
-.vegas-rsvp-label { font-size: 18px; margin-right: 20px; }
-.vegas-rsvp-plus { width: 60px; }
+.vegas-rsvp-label { font-size: 18px; margin: 0 15px; }
+.vegas-rsvp-plus { width: 60px; text-align: center; }
 
 .vegas-hotel {
 	cursor: pointer;
@@ -130,3 +138,16 @@ a { color: inherit; }
 	transition: .3s;
 }
 .vegas-submit-button:hover { background: #fff; }
+
+/*  Errors  */
+
+.error {
+	background: #f07;
+	color: #fff;
+	display: none;
+	font-size: 18px;
+	font-weight: bold;
+	line-height: 50px;
+	margin-bottom: 2px;
+	padding: 0 15px;
+}
