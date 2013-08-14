@@ -23,7 +23,7 @@ $app->response()->header('content-type', 'application/json');
 $app->post('/rsvp', function () use ($app, $db) {
 	$body = $app->request()->getBody();
 	parse_str($body, $post);
-	$guests = $db->guests();
+	$guests = $db->rp_guests();
 	$result = $guests->insert($post);
 	echo $result['id'];
 });
