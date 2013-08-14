@@ -14,7 +14,8 @@ require 'config.php';
 
 // Connect to database
 require 'Slim/NotORM.php';
-$pdo = new PDO('mysql:dbname=' .$c['db']. ';', $c['user'], $c['pass']);
+$mysql = "mysql:host={$config['host']};dbname={$config['db']};";
+$pdo = new PDO($mysql, $config['user'], $config['pass']);
 $db = new NotORM($pdo);
 
 // Set JSON as the default response type
