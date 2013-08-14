@@ -1,0 +1,11 @@
+@import url("reset.css");
+
+/* Birthday */
+
+body { background: #696; color: #363; font-family: "Lucida Grande", Arial, sans-serif; font-size: 62.5%; margin: 5em 0; text-align: center; }
+
+h1 { color: #9c9; font: normal 2.4em Georgia, serif; text-shadow: -1px -2px 1px rgba(0,0,0,.5); }
+
+.signature { width: 60em; margin: 0 auto; text-align: right; }
+.signature p { font-size: 1.1em; font-weight: bold; text-shadow: none; }
+.signature em { color: #9ff; display: block; font: italic 1.8em Georgia, serif; text-shadow: -1px -2px 1px rgba(0,0,0,.5); }

@@ -1,0 +1,27 @@
+
+body { margin: 0; }
+
+html,
+body { height: 100%; }
+
+html { background: #222; color: #fff; -webkit-font-smoothing: antialiased; }
+
+#countdown {
+	max-width: 740px; height: 100px;
+	font: bold 72px/100px 'Proxima Nova', 'Helvetica Neue', Arial, sans-serif;
+	letter-spacing: -3px;
+	margin: -50px 0 0 -370px;
+	position: absolute;
+	top: 50%; left: 50%;
+}
+
+.text {
+	color: #555;
+	display: inline-block;
+	font-size: 13px;
+	letter-spacing: 2px;
+	margin-right: 10px;
+	position: relative;
+	top: -20px;
+	text-transform: uppercase;
+}
