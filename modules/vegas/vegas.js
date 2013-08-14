@@ -1,8 +1,7 @@
 (function ($) {
 
 	function validate() {
-		var bool = $('.vegas-bool-option.selected').data('value'),
-			going = bool === 1 || 0;
+		var going = $('.vegas-bool-option.selected').data('value');
 		if (!$('.vegas-bool-option').hasClass('selected')) {
 			$('.vegas-bool .error').show();
 		}
@@ -64,14 +63,23 @@
 			going: $('.vegas-bool-option.selected').data('value'),
 			name: $('.vegas-rsvp-name').val(),
 			email: $('.vegas-rsvp-email').val(),
-			plus: $('.vegas-rsvp-plus').val(),
+			plus: null,
 			hotel: null
 		}
 		if (rsvp.going) {
+			rsvp.plus = $('.vegas-rsvp-plus').val();
 			rsvp.hotel = $('.selected .vegas-hotel-name').html();
 		}
 		if (validate()) {
-			console.log(rsvp);
+			$.ajax({
+				url: '/rsvp',
+				type: 'post',
+				data: rsvp,
+				dataType: 'json',
+				success: function (response) {
+					console.log('New guest id: '+ response, rsvp);
+				}
+			});
 		}
 	});
 

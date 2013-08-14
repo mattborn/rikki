@@ -20,8 +20,12 @@ $db = new NotORM($pdo);
 // Set JSON as the default response type
 $app->response()->header('content-type', 'application/json');
 
-$app->post('/rsvp', function () use ($app) {
-	// Capture RSVP form data
+$app->post('/rsvp', function () use ($app, $db) {
+	$body = $app->request()->getBody();
+	parse_str($body, $post);
+	$guests = $db->guests();
+	$result = $guests->insert($post);
+	echo $result['id'];
 });
 
 $app->response()->header('content-type', 'text/html');
