@@ -1,14 +1,17 @@
 (function ($) {
 
 	function validate() {
-		var going = $('.vegas-bool-option.selected').data('value');
+		var going = $('.vegas-bool-option.selected').data('value'),
+			name = $('.vegas-rsvp-name').val(),
+			email = $('.vegas-rsvp-email').val(),
+			valid = /\S+@\S+\.\S+/.test(email);
 		if (!$('.vegas-bool-option').hasClass('selected')) {
 			$('.vegas-bool .error').show();
 		}
-		if ($('.vegas-rsvp-name').val() === '') {
+		if (!name.length) {
 			$('.vegas-form .error:eq(0)').show();
 		}
-		if ($('.vegas-rsvp-email').val() === '') {
+		if (!email.length || !valid) {
 			$('.vegas-form .error:eq(1)').show();
 		}
 		if (going && !$('.vegas-hotel').hasClass('selected')) {
@@ -28,9 +31,9 @@
 		$('.vegas-bool-option').removeClass('selected');
 		$(this).addClass('selected');
 		if ($(this).data('value')) {
-			$('.vegas-toggle:hidden').show();
+			$('.vegas-toggle:hidden').slideDown();
 		} else {
-			$('.vegas-toggle:visible').hide();
+			$('.vegas-toggle:visible').slideUp();
 		}
 		if (error.is(':visible')) {
 			error.slideUp();
