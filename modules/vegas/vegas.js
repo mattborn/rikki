@@ -4,7 +4,8 @@
 		var going = $('.vegas-bool-option.selected').data('value'),
 			name = $('.vegas-rsvp-name').val(),
 			email = $('.vegas-rsvp-email').val(),
-			valid = /\S+@\S+\.\S+/.test(email);
+			valid = /\S+@\S+\.\S+/.test(email),
+			size = $('.vegas-rsvp-size').val();
 		if (!$('.vegas-bool-option').hasClass('selected')) {
 			$('.vegas-bool .error').show();
 		}
@@ -13,6 +14,9 @@
 		}
 		if (!email.length || !valid) {
 			$('.vegas-form .error:eq(1)').show();
+		}
+		if (!size.length) {
+			$('.vegas-form .error:eq(2)').show();
 		}
 		if (going && !$('.vegas-hotel').hasClass('selected')) {
 			$('.vegas-hotels .error').show();
@@ -67,10 +71,12 @@
 			name: $('.vegas-rsvp-name').val(),
 			email: $('.vegas-rsvp-email').val(),
 			plus: null,
+			size: null,
 			hotel: null
 		}
 		if (rsvp.going) {
 			rsvp.plus = $('.vegas-rsvp-plus').val();
+			rsvp.size = $('.vegas-rsvp-size').val();
 			rsvp.hotel = $('.selected .vegas-hotel-name').html();
 		}
 		if (validate()) {
@@ -81,6 +87,14 @@
 				dataType: 'json',
 				success: function (response) {
 					console.log('New guest id: '+ response, rsvp);
+					$('.vegas-rsvp, .vegas-header').fadeOut(function () {
+						if (rsvp.going) {
+							$('.vegas-going').show();
+						} else {
+							$('.vegas-not-going').show();
+						}
+						$('.vegas-success').fadeIn();
+					});
 				}
 			});
 		}

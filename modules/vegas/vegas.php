@@ -7,8 +7,9 @@
 </header>
 
 <div class="vegas-rsvp" role="main">
-	<section class="vegas-section">
+	<section class="vegas-section vegas-date">
 		<h1 class="vegas-rsvp-h1">RSVP</h1>
+		<p class="vegas-rsvp-p">April 4 – 6, 2014</p>
 	</section>
 	
 	<section class="vegas-section vegas-step-1">
@@ -30,11 +31,13 @@
 	<section class="vegas-section vegas-form">
 		<p class="error">Did you forget your name?</p>
 		<input class="vegas-rsvp-input vegas-rsvp-name" placeholder="Full Name">
-		<p class="error">You must enter a valid email address.</p>
+		<p class="error">Please enter a valid email address.</p>
 		<input class="vegas-rsvp-input vegas-rsvp-email" placeholder="Email Address">
 		<div class="vegas-toggle">
 			<label class="vegas-rsvp-label">How many are coming with you?</label>
 			<input class="vegas-rsvp-input vegas-rsvp-plus" placeholder="+0">
+			<p class="error">Please enter your shirt size.</p>
+			<input class="vegas-rsvp-input vegas-rsvp-size" placeholder="Shirt Size(s)">
 		</div>
 	</section>
 
@@ -70,4 +73,15 @@
 	<section class="vegas-section vegas-submit">
 		<a class="vegas-submit-button">Submit</a>
 	</section>
+</div>
+
+<div class="vegas-success">
+	<div class="vegas-going">
+		<h1 class="vegas-success-h1">Awesome.</h1>
+		<p class="vegas-rsvp-p">You're so money and you don't even know it!</p>
+	</div>
+	<div class="vegas-not-going">
+		<h1 class="vegas-success-h1">Bummer.</h1>
+		<p class="vegas-rsvp-p">Wish you could be there. Thanks for the RSVP, tho!</p>
+	</div>
 </div>
