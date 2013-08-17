@@ -33,12 +33,12 @@ function html($html) {
 }
 function css($css) {
 	if (file_exists(getcwd() . $css)) {
-		echo '<link rel="stylesheet" href="'.$css.'">';
+		echo '<link rel="stylesheet" href="'.$css.'">'."\n";
 	}
 }
 function js($js) {
 	if (file_exists(getcwd() . $js)) {
-		echo '<script src="'.$js.'"></script>';
+		echo '<script src="'.$js.'"></script>'."\n";
 	}
 }
 
@@ -50,6 +50,8 @@ function js($js) {
 	<link rel="shortcut icon" href="/favicon.ico?v=1"> 
 	<link rel="stylesheet" href="/shared/rikki.css">
 	<?php css($css); ?>
+	<script src="//use.typekit.net/ulo4mhg.js"></script>
+	<script>try{Typekit.load();}catch(e){}</script>
 </head>
 <body>
 <?php html($html); ?>

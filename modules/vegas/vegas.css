@@ -1,7 +1,8 @@
 
 html {
-	background: url(images/vegas.jpg) no-repeat center fixed;
+	background: #004 url(images/vegas.jpg) no-repeat center fixed;
 	background-size: cover;
+	color: rgba(255,255,255,.7);
 	overflow: hidden;
 }
 
