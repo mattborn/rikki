@@ -47,6 +47,7 @@ function js($js) {
 <head>
 	<meta charset="utf-8">
 	<title><?php title($titles, $uri); ?></title>
+	<link rel="shortcut icon" href="/favicon.ico?v=1"> 
 	<link rel="stylesheet" href="/shared/rikki.css">
 	<?php css($css); ?>
 </head>
