@@ -1,4 +1,6 @@
 
+<div class="vegas"></div>
+
 <header class="vegas-header" role="banner">
 	<div class="vegas-header-center">
 		<h1 class="vegas-title">Rikki is turning 21.</h1>

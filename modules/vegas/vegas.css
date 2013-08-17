@@ -2,16 +2,31 @@
 html {
 	background: url(images/vegas.jpg) no-repeat center fixed;
 	background-size: cover;
+	overflow: hidden;
+}
+
+body {
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+	-webkit-text-size-adjust: none;
 }
 
 a { color: inherit; }
 
-.blur {
-	-webkit-filter: blur(3px);
-	-moz-filter: blur(3px);
-	-o-filter: blur(3px);
-	-ms-filter: blur(3px);
-	filter: blur(3px);
+/*  Background  */
+
+.vegas {
+	width: 100%; height: 100%;
+	background: url(images/vegas.jpg) no-repeat center fixed;
+	background-size: cover;
+	display: none;
+	position: fixed;
+	top: 0; left: 0;
+	-webkit-filter: blur(5px);
+	-moz-filter: blur(5px);
+	-o-filter: blur(5px);
+	-ms-filter: blur(5px);
+	filter: blur(5px);
 }
 
 /*  Header  */
@@ -24,22 +39,27 @@ a { color: inherit; }
 }
 .vegas-header-center {
 	width: 100%;
-	margin-top: -82px;
+	margin-top: -70px;
 	position: absolute;
 	top: 50%; left: 0;
 	text-align: center;
 }
 .vegas-title {
 	color: #fff;
-	font-size: 120px;
+	font-size: 100px;
 	font-weight: 800;
 	margin-bottom: 20px;
 }
-.vegas-subtitle { font-size: 60px; }
+.vegas-subtitle { font-size: 50px; }
 
 /*  RSVP Containers  */
 
-.vegas-rsvp { width: 600px; margin: 0 auto; padding: 100px 0; }
+.vegas-rsvp {
+	width: 600px;
+	margin: 0 auto;
+	padding: 100px 0;
+	position: relative;
+	}
 
 .vegas-section {
 	background: rgba(0,0,64,.8);
@@ -74,7 +94,7 @@ a { color: inherit; }
 
 .vegas-date .vegas-rsvp-h1,
 .vegas-date .vegas-rsvp-p { display: inline-block; }
-.vegas-date .vegas-rsvp-h1 { margin-right: 160px; }
+.vegas-date .vegas-rsvp-h1 { margin-right: 150px; }
 
 .vegas-bool { text-align: center; }
 .vegas-bool-option {

@@ -87,6 +87,7 @@
 				dataType: 'json',
 				success: function (response) {
 					console.log('New guest id: '+ response, rsvp);
+					$('.vegas').fadeIn();
 					$('.vegas-rsvp, .vegas-header').fadeOut(function () {
 						if (rsvp.going) {
 							$('.vegas-going').show();
