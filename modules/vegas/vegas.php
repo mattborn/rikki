@@ -80,10 +80,10 @@
 <div class="vegas-success">
 	<div class="vegas-going">
 		<h1 class="vegas-success-h1">Awesome.</h1>
-		<p class="vegas-rsvp-p">You're so money and you don't even know it!</p>
+		<p class="vegas-success-p">You're so money and you don't even know it!</p>
 	</div>
 	<div class="vegas-not-going">
 		<h1 class="vegas-success-h1">Bummer.</h1>
-		<p class="vegas-rsvp-p">Wish you could be there. Thanks for the RSVP, tho!</p>
+		<p class="vegas-success-p">Wish you could be there. Thanks for the RSVP, tho!</p>
 	</div>
 </div>

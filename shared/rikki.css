@@ -28,6 +28,7 @@ textarea {
 	color: inherit;
 	font: inherit;
 	font-size: inherit;
+	line-height: normal;
 	margin: 0;
 	resize: none;
 	-webkit-font-smoothing: inherit;

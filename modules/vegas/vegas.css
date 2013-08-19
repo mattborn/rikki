@@ -176,6 +176,7 @@ a { color: inherit; }
 	text-align: center;
 }
 .vegas-success-h1 { margin-bottom: 10px; }
+.vegas-success-p { font-size: 20px; line-height: 1.2; }
 .vegas-going,
 .vegas-not-going { display: none; }
 

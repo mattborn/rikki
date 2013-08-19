@@ -26,7 +26,31 @@ $app->post('/rsvp', function () use ($app, $db) {
 	parse_str($body, $post);
 	$guests = $db->rp_guests();
 	$result = $guests->insert($post);
-	echo $result['id'];
+	
+	$headers = 'MIME-Version: 1.0'."\r\n";
+	$headers .= 'Content-type: text/html; charset=utf-8'."\r\n";
+	$headers .= 'From: RSVP <no-reply@rikkipalm.com>';
+	
+	if (!$post['going']) {
+		$subject = $post['name'] .' is not going.';
+		$message = 'Make them feel bad? <a href="mailto:'. $post['email'] .'">'. $post['email'] .'</a>';
+	} else {
+		$subject = $post['name'] . ' is going!';
+		$message = '<a href="mailto:'. $post['email'] .'">'. $post['email'] .'</a><br>';
+		$message .= 'Plus: '. $post['plus'] .'<br>';
+		$message .= 'Size(s): '. $post['size'] .'<br>';
+		$message .= 'Hotel: '. $post['hotel'];
+	}
+	
+	$send = mail('rsvp@rikkipalm.com', $subject, $message, $headers);
+	$status = $send ? 'Mail sent.' : 'Mail failed.';
+	
+	$return = array(
+		'id' => $result['id'],
+		'status' => $status
+	);
+	
+	echo json_encode($return);
 });
 
 $app->response()->header('content-type', 'text/html');
